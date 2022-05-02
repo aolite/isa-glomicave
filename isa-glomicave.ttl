@@ -1,0 +1,170 @@
+@prefix : <https://w3id.org/def/isa-glomicave/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix schema: <https://schema.org/> .
+@prefix isaterms: <http://purl.org/isaterms>.
+@prefix glomicave: <https://w3id.org/def/isa-glomicave/> .
+@base <https://w3id.org/def/isa-glomicave/> .
+
+<https://w3id.org/def/isa-glomicave/> rdf:type owl:Ontology ;
+                                      dcterms:title "ISA Abstract Model extended to Metabolites, Gnomic and Metabolonic studies "@en ;
+                                      dcterms:description "The proposed ontology not only focused on the abstract reference model but also, served as a extention to different metabolonic, gnomic and metabolites studies. Also, the ontoloy has been also linked with referent models in relation to provide observation and measurement ontology pattern. Finally, the proposed semantic model has been also linked with referent repositories for representing studies and assays: 1. Metabolites repository; 2. Array Express; 3. GEO Repository"@en ;
+                                      dcterms:publisher <https://ultimatewater.eu/> ;
+                                      dcterms:creator "Aitor Corchero";
+                                      owl:versionIRI <https://w3id.org/def/isa-glomicave/> ;
+                                      owl:versionInfo "v0.0.1";
+                                      dcterms:modified "2022-04-05"^^xsd:date ;
+                                      dcterms:issued "2022-04-05"^^xsd:date ;
+                                      owl:priorVersion <https://github.com/ISA-tools/linkedISA-ontologies> ;
+                                      dcterms:license <https://opensource.org/licenses/ISC> ;
+                                      dcterms:source <https://github.com/aolite/isa-glomicave> ;
+                                      vann:preferredNamespacePrefix "glomicave" ;
+                                      vann:preferredNamespaceUri "https://w3id.org/def/isa-glomicave/" .
+
+
+#################################################################
+#    Creator metadata
+#################################################################
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+###   https://w3id.org/def/isa-glomicave/status
+glomicave:status rdf:type owl:AnnotationProperty .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/def/isa-glomicave/hasIdentifier
+glomicave:hasIdentifier rdf:type owl:ObjectProperty ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has identifier"@en .
+
+###  https://w3id.org/def/isa-glomicave/isIdentifierOf
+glomicave:isIdentifierOf rdf:type owl:ObjectProperty ;
+                         rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                         owl:inverseOf glomicave:hasIdentifier ;
+                         rdfs:label "has identifier"@en .
+
+### https://schema.org/author
+schema:author rdf:type owl:ObjectProperty ;
+              rdfs:comment "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably." ;
+              rdfs:isDefinedBy <https://schema.org/>  ;
+              rdfs:label "author"@en .
+
+#################################################################
+#    Data Properties
+#################################################################
+
+### https://w3id.org/def/isa-glomicave/identifier
+glomicave:identifier rdf:type owl:Class ;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:comment "A unique identifier is an identifier that uniquely identifies some thing"@en ;
+                      rdfs:range xsd:anyURI ;
+                      rdfs:label "identifier"@en .
+
+### https://w3id.org/def/isa-glomicave/pubmedIdentifier
+glomicave:pubmedIdentifier rdf:type owl:Class ;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:subPropertyOf glomicave:identifier ;
+                      rdfs:comment "A unique identifier defined in PubMed"@en ;
+                      rdfs:label "PubMed identifier"@en .
+
+### https://w3id.org/def/isa-glomicave/doi
+glomicave:doi rdf:type owl:Class ;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:subPropertyOf glomicave:identifier ;
+                      rdfs:comment "A unique identifier defined in DOI"@en ;
+                      rdfs:label "PubMed identifier"@en .
+
+### https://w3id.org/def/isa-glomicave/title
+glomicave:title rdf:type owl:Class ;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:range xsd:string ;  
+                      rdfs:label "title"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/def/isa-glomicave/Publication
+glomicave:Publication rdf:type owl:Class ;
+               rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+               owl:equivalentClass isaterms:publication ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty glomicave:identifier ;
+                                 owl:allValuesFrom xsd:anyURI ;
+                               ] ;
+               rdfs:comment "The preparation and issuing of a investigation"@en ;
+               rdfs:label "Publication"@en .
+
+### https://schema.org/Person
+schema:Person rdf:type owl:Class ;
+              rdfs:isDefinedBy <https://schema.org/> ;
+              rdfs:comment "A person (alive, dead, undead, or fictional)."@en ;
+              rdfs:label "Person"@en . 
+
+### https://schema.org/Organization
+schema:Organization rdf:type owl:Class ;
+              rdfs:isDefinedBy <https://schema.org/> ;
+              rdfs:comment "An organization such as a school, NGO, corporation, club, etc."@en ;
+              rdfs:label "Organization"@en . 
+
+#################################################################
+#    Instances
+#################################################################

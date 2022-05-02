@@ -3,6 +3,6 @@ const fs = require('fs')
 
 const parser = new N3.Parser();
 
-const rdfStream = fs.createReadStream('./wisis.ttl');
+const rdfStream = fs.createReadStream('./isa-glomicave.ttl');
 
 parser.parse(rdfStream, console.log);
