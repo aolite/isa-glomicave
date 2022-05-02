@@ -1,0 +1,16 @@
+PREFIX : <http://glomicave.eu/ontology/>
+MAPPING :MetaboliteMapping
+FROM SQL {
+  SELECT * FROM public.metabolites
+}
+TO {
+  ?metabolite a :Assay ;
+              a :MetabolitesAssay ;
+              :id ?id ;
+              :hasPart ?study ;
+              :databaseid ?database_identifier ; 
+              :formula ?chemical_formula .
+} 
+WHERE {
+  BIND(template("http://glomicave.eu/ontology/Metabolite{id}") AS ?metabolite)
+}

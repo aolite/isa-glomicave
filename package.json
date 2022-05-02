@@ -1,0 +1,29 @@
+{
+  "name": "ISA Model Ontology",
+  "version": "1.0.0",
+  "description": "A project to elaborate an ontology to represent the ISA model",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start:dev": "nodemon index.js",
+    "test": "jest"
+  },
+
+  "keywords": [
+    "ontology",
+    "Gnomics"
+  ],
+  "author": "Aitor Corchero",
+  "license": "ISC",
+  "dependencies": {
+    "fetch-sparql-endpoint": "latest",
+    "jest": "latest",
+    "jshint": "latest",
+    "n3": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}

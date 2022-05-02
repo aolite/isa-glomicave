@@ -1,0 +1,107 @@
+@prefix : <https://w3id.org/def/wsis/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix s4city: <https://saref.etsi.org/saref4city/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix s4syst: <https://saref.etsi.org/saref4syst/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix geosp: <http://www.opengis.net/ont/geosparql#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix schema: <http://schema.org/> .
+@prefix s4watr: <https://saref.etsi.org/saref4watr/> .
+@prefix wsis: <https://w3id.org/def/wsis/> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@base <https://w3id.org/def/isa-glomicave/> .
+
+<https://w3id.org/def/wsis/> rdf:type owl:Ontology ;
+                                      dcterms:title "Water Smart Industrial Symbiosis (WSIS) Ontology"@en ;
+                                      dcterms:description "An ontology as a catalyst for Water Smart Industrial Symbiosis (WSIS), in which water/wastewater plays a key role within a dynamic socio-economic and business oriented industrial ecosystem"@en ;
+                                      dcterms:publisher <https://ultimatewater.eu/> ;
+                                      dcterms:creator "Aitor Corchero";
+                                      owl:versionIRI <https://w3id.org/def/wsis/v0.0.1/> ;
+                                      owl:versionInfo "v0.0.2" ;
+                                      dcterms:modified "2022-03-05"^^xsd:date ;
+                                      dcterms:issued "2022-03-05"^^xsd:date ;
+                                      dcterms:license <https://opensource.org/licenses/ISC> ;
+                                      dcterms:source <https://github.com/ULTIMATE-DIGITAL-TOOLS/ontology> ;
+                                      vann:preferredNamespacePrefix "wsis" ;
+                                      vann:preferredNamespaceUri "https://w3id.org/def/wsis/" .
+
+
+#################################################################
+#    Creator metadata
+#################################################################
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+#################################################################
+#    Data Properties
+#################################################################
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+#################################################################
+#    Instances
+#################################################################

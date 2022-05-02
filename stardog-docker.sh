@@ -1,0 +1,1 @@
+docker run -it -e STARDOG_EXT=/var/opt/stardog-ext -v ~/Downloads/stardog-ext:/var/opt/stardog-ext -v ~/Downloads/stardog-home/:/var/opt/stardog -p 5820:5820 stardog/stardog

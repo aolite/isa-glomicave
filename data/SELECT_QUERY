@@ -1,0 +1,12 @@
+PREFIX : <http://glomicave.eu/ontology/>
+
+SELECT * {
+   GRAPH <virtual://glomicave> {
+      ?metabolite a :Assay ;
+              a :MetabolitesAssay ;
+              :id ?id ;
+              :hasPart ?study ;
+              :databaseid ?database_identifier ; 
+              :formula ?chemical_formula .
+   }
+}
