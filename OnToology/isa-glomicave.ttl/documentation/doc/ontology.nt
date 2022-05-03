@@ -5,7 +5,7 @@
 <https://w3id.org/def/isa-glomicave/> <http://purl.org/dc/terms/issued> "2022-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/def/isa-glomicave/> <http://purl.org/dc/terms/license> <https://opensource.org/licenses/ISC> .
 <https://w3id.org/def/isa-glomicave/> <http://purl.org/dc/terms/modified> "2022-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/def/isa-glomicave/> <http://purl.org/dc/terms/publisher> <https://ultimatewater.eu/> .
+<https://w3id.org/def/isa-glomicave/> <http://purl.org/dc/terms/publisher> <https://glomicave.eu/> .
 <https://w3id.org/def/isa-glomicave/> <http://purl.org/dc/terms/source> <https://github.com/aolite/isa-glomicave> .
 <https://w3id.org/def/isa-glomicave/> <http://purl.org/dc/terms/title> "ISA Abstract Model extended to Metabolites, Gnomic and Metabolonic studies "@en .
 <https://w3id.org/def/isa-glomicave/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "glomicave" .
@@ -590,9 +590,9 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid16 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid17 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid18 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # 
 # 
 # #################################################################
