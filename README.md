@@ -1,9 +1,4 @@
----
-title: 'Project documentation template'
-disqus: hackmd
----
-
-Project Title
+ISA Ontology Model
 ===
 ![downloads](https://img.shields.io/github/downloads/atom/atom/total.svg)
 ![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
@@ -13,79 +8,23 @@ Project Title
 
 [TOC]
 
-## Beginners Guide
+## ISA Ontology Model
 
-If you are a total beginner to this, start here!
+This ontology is mainly focused on representing the metada related to the [ISA Model](https://isa-specs.readthedocs.io/en/latest/isamodel.html#) and also, an update over the previous ontology based on previous versions of the model [ISA Ontological Model](https://github.com/ISA-tools/linkedISA-ontologies). Therefore, the ontology is mainly based on the implementation of this abstract model represented in the followng figure: 
 
-1. Visit hackmd.io
-2. Click "Sign in"
-3. Choose a way to sign in
-4. Start writing note!
+![Source: https://isa-specs.readthedocs.io/en/latest/isamodel.html#](https://i.imgur.com/dxCQeSk.png)
+Source: https://isa-specs.readthedocs.io/en/latest/isamodel.html#
 
-User story
----
+## ISA-Glomicave Ontological model
 
-```gherkin=
-Feature: Guess the word
+The proposed ontology not only focused on the abstract reference model but also, served as a extention to different metabolonic, gnomic and metabolites studies. Also, the ontoloy has been also linked with referent models in relation to provide observation and measurement ontology pattern. Finally, the proposed semantic model has been also linked with referent repositories for representing studies and assays: 
 
-  # The first example has two steps
-  Scenario: Maker starts a game
-    When the Maker starts a game
-    Then the Maker waits for a Breaker to join
+1. Metabolites repository
+2. Array Express
+3. GEO Repository
 
-  # The second example has three steps
-  Scenario: Breaker joins a game
-    Given the Maker has started a game with the word "silky"
-    When the Breaker joins the Maker's game
-    Then the Breaker must guess a word with 5 characters
-```
-> I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it. [name=Bill Gates]
+Considering the ontology structure, the built ontology model is built based on the following core module according to the ISA documentation: 
 
-
-```gherkin=
-Feature: Shopping Cart
-  As a Shopper
-  I want to put items in my shopping cart
-  Because I want to manage items before I check out
-
-  Scenario: User adds item to cart
-    Given I'm a logged-in User
-    When I go to the Item page
-    And I click "Add item to cart"
-    Then the quantity of items in my cart should go up
-    And my subtotal should increment
-    And the warehouse inventory should decrement
-```
-
-> Read more about Gherkin here: https://docs.cucumber.io/gherkin/reference/
-
-User flows
----
-```sequence
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-Note left of Alice: Alice responds
-Alice->Bob: Where have you been?
-```
-
-> Read more about sequence-diagrams here: http://bramp.github.io/js-sequence-diagrams/
-
-Project Timeline
----
-```mermaid
-gantt
-    title A Gantt Diagram
-
-    section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
-    Task in sec      :2014-01-12  , 12d
-    anther task      : 24d
-```
-
-> Read more about mermaid here: http://mermaid-js.github.io/mermaid/
 
 ## Appendix and FAQ
 
