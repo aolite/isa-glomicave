@@ -1,0 +1,12 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/def/isa-glomicave/> a prov:Entity;
+	 dc:title "ISA Abstract Model extended to Metabolites, Gnomic and Metabolonic studies ";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <https://github.com/ISA-tools/linkedISA-ontologies>;
+	 prov:wasGeneratedAt "2022-04-05";
+.
+:agent0 a prov:Agent; foaf:name "Aitor Corchero".
