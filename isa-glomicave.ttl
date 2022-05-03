@@ -17,7 +17,7 @@
 <https://w3id.org/def/isa-glomicave/> rdf:type owl:Ontology ;
                                       dcterms:title "ISA Abstract Model extended to Metabolites, Gnomic and Metabolonic studies "@en ;
                                       dcterms:description "The proposed ontology not only focused on the abstract reference model but also, served as a extention to different metabolonic, gnomic and metabolites studies. Also, the ontoloy has been also linked with referent models in relation to provide observation and measurement ontology pattern. Finally, the proposed semantic model has been also linked with referent repositories for representing studies and assays: 1. Metabolites repository; 2. Array Express; 3. GEO Repository"@en ;
-                                      dcterms:publisher <https://ultimatewater.eu/> ;
+                                      dcterms:publisher <https://glomicave.eu/> ;
                                       dcterms:creator "Aitor Corchero";
                                       owl:versionIRI <https://w3id.org/def/isa-glomicave/> ;
                                       owl:versionInfo "v0.0.1";
