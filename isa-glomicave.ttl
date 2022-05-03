@@ -9,7 +9,7 @@
 @prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix schema: <https://schema.org/> .
-@prefix saref: <https://saref.etsi.org/core/>
+@prefix saref: <https://saref.etsi.org/core/> .
 @prefix isaterms: <http://purl.org/isaterms>.
 @prefix glomicave: <https://w3id.org/def/isa-glomicave/> .
 @base <https://w3id.org/def/isa-glomicave/> .
