@@ -90,22 +90,81 @@ glomicave:status rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/def/isa-glomicave/hasIdentifier
-glomicave:hasIdentifier rdf:type owl:ObjectProperty ;
+###  https://w3id.org/def/isa-glomicave/hasPublication
+glomicave:hasPublication rdf:type owl:ObjectProperty ;
+                        rdfs:range glomicave:Publication;
                         rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
-                        rdfs:label "has identifier"@en .
+                        rdfs:label "publications"@en .
 
-###  https://w3id.org/def/isa-glomicave/isIdentifierOf
-glomicave:isIdentifierOf rdf:type owl:ObjectProperty ;
-                         rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
-                         owl:inverseOf glomicave:hasIdentifier ;
-                         rdfs:label "has identifier"@en .
+###  https://w3id.org/def/isa-glomicave/hasOrganization
+glomicave:hasOrganization rdf:type owl:ObjectProperty ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has organization"@en .
 
 ### https://schema.org/author
 schema:author rdf:type owl:ObjectProperty ;
               rdfs:comment "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably." ;
               rdfs:isDefinedBy <https://schema.org/>  ;
               rdfs:label "author"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasContact
+glomicave:hasContact rdf:type owl:ObjectProperty ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:range glomicave:Person;;
+                        rdfs:label "contacts"@en .
+
+###  https://w3id.org/def/isa-glomicave/isContactOf
+glomicave:isContactOf rdf:type owl:ObjectProperty ;
+                        owl:inverseOf glomicave:hasContact;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "is contact of"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasPart
+glomicave:hasPart rdf:type owl:ObjectProperty ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has part"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasRole
+glomicave:hasRole rdf:type owl:ObjectProperty ;
+                        rdfs:range glomicave:Role;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has role"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasAffiliation
+glomicave:hasAffiliation rdf:type owl:ObjectProperty ;
+                        rdfs:range schema:Organization;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has affiliation"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasDesign
+glomicave:hasDesign rdf:type owl:ObjectProperty ;
+                        rdfs:range glomicave:StudyDesign;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "design type"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasFactor
+glomicave:hasFactor rdf:type owl:ObjectProperty ;
+                        rdfs:range glomicave:Factor;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "factor type"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasProtocol
+glomicave:hasProtocol rdf:type owl:ObjectProperty ;
+                        rdfs:range glomicave:Protocol;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has protocol"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasParameter
+glomicave:hasParameter rdf:type owl:ObjectProperty ;
+                        rdfs:range glomicave:Parameter;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has parameter"@en .
+
+###  https://w3id.org/def/isa-glomicave/hasComponent
+glomicave:hasComponent rdf:type owl:ObjectProperty ;
+                        rdfs:range glomicave:ProtocolComponent;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has component"@en .
 
 #################################################################
 #    Data Properties
@@ -135,8 +194,37 @@ glomicave:doi rdf:type owl:Class ;
 ### https://w3id.org/def/isa-glomicave/title
 glomicave:title rdf:type owl:Class ;
                       rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
-                      rdfs:range xsd:string ;  
+                      rdfs:range xsd:string ;
+                      rdfs:comment "A concise name given to the investigation/study/assay."@en ;  
                       rdfs:label "title"@en .
+
+### https://w3id.org/def/isa-glomicave/description
+glomicave:description rdf:type owl:Class ;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:range xsd:string ; 
+                      rdfs:comment "A textual description of the investigation/study/assay."@en ;   
+                      rdfs:label "description"@en .
+
+### https://w3id.org/def/isa-glomicave/submissionDate
+glomicave:submissionDate rdf:type owl:Class ;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:range xsd:dateTime ;  
+                      rdfs:comment "The date on which the investigation/study/assay was reported to the repository"@en ;   
+                      rdfs:label "Submission Date"@en .
+
+### https://w3id.org/def/isa-glomicave/releaseDate
+glomicave:submissionDate rdf:type owl:Class ;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:range xsd:dateTime ;  
+                      rdfs:comment "The date on which the investigation/study/assay was released publicly."@en ;   
+                      rdfs:label "Release Date"@en .
+
+### https://w3id.org/def/isa-glomicave/hasName
+glomicave:hasName rdf:type owl:Class ;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:range xsd:string ;  
+                      rdfs:comment ""@en ;   
+                      rdfs:label "name"@en .
 
 #################################################################
 #    Classes
@@ -146,15 +234,17 @@ glomicave:title rdf:type owl:Class ;
 glomicave:Publication rdf:type owl:Class ;
                rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
                owl:equivalentClass isaterms:publication ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty glomicave:identifier ;
-                                 owl:allValuesFrom xsd:anyURI ;
-                               ] ;
                rdfs:comment "The preparation and issuing of a investigation"@en ;
                rdfs:label "Publication"@en .
 
-### https://schema.org/Person
-schema:Person rdf:type owl:Class ;
+### https://w3id.org/def/isa-glomicave/Person
+glomicave:Person rdf:type owl:Class ;
+              rdfs:subClassOf schema:Person,
+              [
+                rdf:type owl:Restriction;
+                owl:onProperty glomicave:hasAffiliation ;
+                owl:allValuesFrom schema:Organization
+              ];
               rdfs:isDefinedBy <https://schema.org/> ;
               rdfs:comment "A person (alive, dead, undead, or fictional)."@en ;
               rdfs:label "Person"@en . 
@@ -164,6 +254,99 @@ schema:Organization rdf:type owl:Class ;
               rdfs:isDefinedBy <https://schema.org/> ;
               rdfs:comment "An organization such as a school, NGO, corporation, club, etc."@en ;
               rdfs:label "Organization"@en . 
+
+###  https://w3id.org/def/isa-glomicave/Investigation
+glomicave:Investigation rdf:type owl:Class ;
+                        rdfs:SubClassOf [
+                            rdf:type owl:Restriction;
+                            owl:onProperty glomicave:hasPart ;
+                            owl:allValuesFrom glomicave:Study
+                        ] ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment "An Investigation is used to record metadata relating to the description of the investigation context, such as the title and description of the investigation as well as about related people and scholarly publications. Study and Assay objects are grouped within an Investigation to record other metadata within the relevant contexts."@en ;
+                        rdfs:label "Investigation"@en . 
+
+###  https://w3id.org/def/isa-glomicave/Role
+glomicave:Role rdf:type owl:Class ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "role"@en . 
+
+###  https://w3id.org/def/isa-glomicave/Study
+glomicave:Study rdf:type owl:Class ;
+                        rdfs:subClassOf [
+                            rdf:type owl:Restriction;
+                            owl:onProperty glomicave:hasDesign ;
+                            owl:allValuesFrom glomicave:StudyDesign
+                        ], 
+                        [
+                            rdf:type owl:Restriction;
+                            owl:onProperty glomicave:hasFactor ;
+                            owl:allValuesFrom glomicave:Factor
+                        ],
+                        [
+                            rdf:type owl:Restriction;
+                            owl:onProperty glomicave:hasProtocol ;
+                            owl:allValuesFrom glomicave:Protocol
+                        ];
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "study"@en . 
+
+###  https://w3id.org/def/isa-glomicave/StudyDesign
+glomicave:StudyDesign rdf:type owl:Class ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "study design"@en . 
+
+###  https://w3id.org/def/isa-glomicave/Factor
+glomicave:Factor rdf:type owl:Class ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "factor"@en . 
+
+###  https://w3id.org/def/isa-glomicave/Protocol
+glomicave:Protocol rdf:type owl:Class ;
+                        rdfs:subClassOf [
+                            rdf:type owl:Restriction;
+                            owl:onProperty glomicave:hasParameter ;
+                            owl:allValuesFrom glomicave:Parameter
+                        ],  
+                        [
+                            rdf:type owl:Restriction;
+                            owl:onProperty glomicave:hasComponent ;
+                            owl:allValuesFrom glomicave:ProtocolComponent
+                        ];
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "protocol"@en . 
+
+###  https://w3id.org/def/isa-glomicave/Parameter
+glomicave:Parameter rdf:type owl:Class ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "parameter"@en . 
+
+###  https://w3id.org/def/isa-glomicave/ProtocolComponent
+glomicave:ProtocolComponent rdf:type owl:Class ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "protocol component"@en . 
+
+###  https://w3id.org/def/isa-glomicave/Hardware
+glomicave:Hardware rdf:type owl:Class ;
+                        rdfs:subClassOf glomicave:ProtocolComponent;
+                        owl:disjointWith glomicave:Software ;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "hardware"@en . 
+
+###  https://w3id.org/def/isa-glomicave/Software
+glomicave:Software rdf:type owl:Class ;
+                        rdfs:subClassOf glomicave:ProtocolComponent;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                        rdfs:comment ""@en ;
+                        rdfs:label "software"@en . 
 
 #################################################################
 #    Instances
