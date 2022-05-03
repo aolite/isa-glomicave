@@ -13,7 +13,7 @@
                                        <http://purl.org/dc/terms/issued> "2022-04-05"^^xsd:date ;
                                        <http://purl.org/dc/terms/license> <https://opensource.org/licenses/ISC> ;
                                        <http://purl.org/dc/terms/modified> "2022-04-05"^^xsd:date ;
-                                       <http://purl.org/dc/terms/publisher> <https://ultimatewater.eu/> ;
+                                       <http://purl.org/dc/terms/publisher> <https://glomicave.eu/> ;
                                        <http://purl.org/dc/terms/source> <https://github.com/aolite/isa-glomicave> ;
                                        <http://purl.org/dc/terms/title> "ISA Abstract Model extended to Metabolites, Gnomic and Metabolonic studies "@en ;
                                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "glomicave" ;
@@ -666,13 +666,13 @@ xsd:date rdf:type rdfs:Datatype .
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
 [ owl:cardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 #################################################################

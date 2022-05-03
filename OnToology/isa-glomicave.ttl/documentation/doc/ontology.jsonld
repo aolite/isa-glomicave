@@ -63,7 +63,7 @@
   } ]
 }, {
   "@id" : "_:genid17",
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
@@ -75,7 +75,7 @@
   } ]
 }, {
   "@id" : "_:genid19",
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
@@ -294,7 +294,7 @@
     "@value" : "2022-04-05"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
-    "@id" : "https://ultimatewater.eu/"
+    "@id" : "https://glomicave.eu/"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@id" : "https://github.com/aolite/isa-glomicave"

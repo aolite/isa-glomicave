@@ -15,7 +15,7 @@
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-04-05</terms:issued>
         <terms:license rdf:resource="https://opensource.org/licenses/ISC"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-04-05</terms:modified>
-        <terms:publisher rdf:resource="https://ultimatewater.eu/"/>
+        <terms:publisher rdf:resource="https://glomicave.eu/"/>
         <terms:source rdf:resource="https://github.com/aolite/isa-glomicave"/>
         <terms:title xml:lang="en">ISA Abstract Model extended to Metabolites, Gnomic and Metabolonic studies </terms:title>
         <vann:preferredNamespacePrefix>glomicave</vann:preferredNamespacePrefix>
@@ -1059,13 +1059,13 @@
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
     
 
