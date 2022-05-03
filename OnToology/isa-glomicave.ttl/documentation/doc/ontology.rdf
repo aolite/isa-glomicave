@@ -1,0 +1,1093 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/isa-glomicave/"
+     xml:base="https://w3id.org/def/isa-glomicave/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/def/isa-glomicave/">
+        <owl:versionIRI rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <terms:creator>Aitor Corchero</terms:creator>
+        <terms:description xml:lang="en">The proposed ontology not only focused on the abstract reference model but also, served as a extention to different metabolonic, gnomic and metabolites studies. Also, the ontoloy has been also linked with referent models in relation to provide observation and measurement ontology pattern. Finally, the proposed semantic model has been also linked with referent repositories for representing studies and assays: 1. Metabolites repository; 2. Array Express; 3. GEO Repository</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-04-05</terms:issued>
+        <terms:license rdf:resource="https://opensource.org/licenses/ISC"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-04-05</terms:modified>
+        <terms:publisher rdf:resource="https://ultimatewater.eu/"/>
+        <terms:source rdf:resource="https://github.com/aolite/isa-glomicave"/>
+        <terms:title xml:lang="en">ISA Abstract Model extended to Metabolites, Gnomic and Metabolonic studies </terms:title>
+        <vann:preferredNamespacePrefix>glomicave</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/def/isa-glomicave/</vann:preferredNamespaceUri>
+        <owl:priorVersion rdf:resource="https://github.com/ISA-tools/linkedISA-ontologies"/>
+        <owl:versionInfo>v0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#cardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#cardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://saref.etsi.org/core/hasMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeasurement">
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+        <rdfs:label xml:lang="en">has measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasurementOf">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/hasMeasurement"/>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+        <rdfs:label xml:lang="en">is measurement of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/author -->
+
+
+    <owl:ObjectProperty rdf:about="https://schema.org/author">
+        <rdfs:comment>The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasAffiliation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasAffiliation">
+        <rdfs:range rdf:resource="https://schema.org/Organization"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has affiliation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasCharacteristic -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasCharacteristic">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Characteristics"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has characteristics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasComponent">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/ProtocolComponent"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasContact -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasContact">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Person"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">contacts</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasData -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasData">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasDesign -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasDesign">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/StudyDesign"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">design type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasFactor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasFactor">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Factor"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">factor type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasInput -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasInput">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasOrganization">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has organization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasOutput">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasParameter -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasParameter">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Parameter"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasPart">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasPlatform -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasPlatform">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Platform"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has platform</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasProcess">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Process"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has process</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasProtocol -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasProtocol">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Protocol"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has protocol</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasPublication -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasPublication">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Publication"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">publications</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasRole -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasRole">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Role"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasTechnology -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasTechnology">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Technology"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has technology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/isContactOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/isContactOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/isa-glomicave/hasContact"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">is contact of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/accessionNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/accessionNumber">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">performer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/address -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/address">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/description -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A textual description of the investigation/study/assay.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/doi -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/doi">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/isa-glomicave/identifier"/>
+        <rdfs:comment xml:lang="en">A unique identifier defined in DOI</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">PubMed identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/email -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/email">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/file -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/file">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">file</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasData -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/hasData"/>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/hasDate">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasFileName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/hasFileName">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">file name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/hasName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has Value</rdfs:label>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasPerformer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/hasPerformer"/>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/identifier">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A unique identifier is an identifier that uniquely identifies some thing</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/performer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/performer">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">performer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/phone -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/phone">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">phone</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/pubmedIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/pubmedIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/isa-glomicave/identifier"/>
+        <rdfs:comment xml:lang="en">A unique identifier defined in PubMed</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">PubMed identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/status -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/status">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/submissionDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/submissionDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date on which the investigation/study/assay was released publicly.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date on which the investigation/study/assay was reported to the repository</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">Release Date</rdfs:label>
+        <rdfs:label xml:lang="en">Submission Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/title -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/title">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A concise name given to the investigation/study/assay.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/version -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/version">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error2 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
+    
+
+
+    <!-- http://purl.org/isatermspublication -->
+
+
+    <owl:Class rdf:about="http://purl.org/isatermspublication">
+        <owl:equivalentClass rdf:resource="https://w3id.org/def/isa-glomicave/Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Measurement -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Measurement"/>
+    
+
+
+    <!-- https://saref.etsi.org/core/UnitOfMeasure -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/UnitOfMeasure">
+        <rdfs:comment xml:lang="en">The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called &quot;watt&quot;. Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+        <rdfs:label xml:lang="en">Unit of measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+
+    <owl:Class rdf:about="https://schema.org/Organization">
+        <rdfs:comment xml:lang="en">An organization such as a school, NGO, corporation, club, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+
+    <owl:Class rdf:about="https://schema.org/Person"/>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Assay -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Assay">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Characteristic -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Characteristic">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">characteristic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Characteristics -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Characteristics"/>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Data -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Data">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasFileName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Factor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Factor">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Hardware -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Hardware">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/isa-glomicave/ProtocolComponent"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/def/isa-glomicave/Software"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">hardware</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Investigation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Investigation">
+        <rdfs:comment xml:lang="en">An Investigation is used to record metadata relating to the description of the investigation context, such as the title and description of the investigation as well as about related people and scholarly publications. Study and Assay objects are grouped within an Investigation to record other metadata within the relevant contexts.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">Investigation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Material -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Material">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasPlatform"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasTechnology"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/Technology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Measurement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Measurement">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error2"/>
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Parameter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Parameter">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Person -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Person">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasAffiliation"/>
+                <owl:allValuesFrom rdf:resource="https://schema.org/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A person (alive, dead, undead, or fictional).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Platform -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Platform">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Process -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Process">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasInput"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasOutput"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasPerformer"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Protocol -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Protocol">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasComponent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/ProtocolComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasParameter"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">protocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/ProtocolComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/ProtocolComponent">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">protocol component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Publication -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Publication">
+        <rdfs:comment xml:lang="en">The preparation and issuing of a investigation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Qualitative -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Qualitative">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/isa-glomicave/Characteristic"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">qualitative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Quantitative -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Quantitative">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/isa-glomicave/Characteristic"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">quantitative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Role -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Role">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Sample -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Sample">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/isa-glomicave/Material"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">sample</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Software -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Software">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/isa-glomicave/ProtocolComponent"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Source -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Source">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/isa-glomicave/Material"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Study -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Study">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasDesign"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/StudyDesign"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasFactor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/Factor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasProtocol"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/isa-glomicave/Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/StudyDesign -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/StudyDesign">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">study design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/Technology -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Technology">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">technology</rdfs:label>
+    </owl:Class>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/def/isa-glomicave/hasData">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has data</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
