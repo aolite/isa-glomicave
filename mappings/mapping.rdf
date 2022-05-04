@@ -35,4 +35,40 @@ WHERE {
   BIND(template("http://glomicave.eu/ontology/Assay/{id}") AS ?metabolite)
   BIND(template("http://glomicave.eu/ontology/Factor/{database_identifier}") AS ?factor)
   BIND(template("http://glomicave.eu/ontology/Measurement/Measurement_{id}") AS ?measurement)
+};
+
+MAPPING :GnomicMapping
+FROM SQL {
+  SELECT * FROM "public"."genomics"
+}
+TO {
+    ?gnomic a :Assay ;
+            :identifier ?id;
+            :hasName ?dataset_name;
+            :title ?title;
+            :hasType ?type;
+            :description ?description;
+            :hasMaterial ?material.
+    
+    ?material a :Material;
+              :hasPlatform ?platform_uri;
+              :hasType ?sample_type;
+              :hasName ?sample_organism;
+              :hasValue ?concentrations;
+              :feature_count ?feature_count.
+    
+    ?platform_uri a :Platform;
+                  :identifier ?platform;
+                  :name ?platform;
+                  :description ?platform_organism ;
+                  :hasTechnology ?technology .
+    
+    ?technology a :Technology;
+                :hasName ?technology;
+                :hasType ?platform_technology_type.
+} WHERE {
+  BIND(template("http://glomicave.eu/ontology/Assay/{id}") AS ?gnomic)
+  BIND(template("http://glomicave.eu/ontology/Material/Material{id}") AS ?material)
+  BIND(template("http://glomicave.eu/ontology/Platform/Platform{id}") AS ?platform_uri)
+  BIND(template("http://glomicave.eu/ontology/Technology/Technology{id}") AS ?technology)
 }
