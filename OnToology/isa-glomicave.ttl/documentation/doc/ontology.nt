@@ -51,9 +51,6 @@
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://www.w3.org/2002/07/owl#cardinality
-<http://www.w3.org/2002/07/owl#cardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://www.w3.org/2002/07/owl#qualifiedCardinality
 <http://www.w3.org/2002/07/owl#qualifiedCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -141,6 +138,12 @@
 <https://w3id.org/def/isa-glomicave/hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
 <https://w3id.org/def/isa-glomicave/hasInput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
 <https://w3id.org/def/isa-glomicave/hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en .
+# 
+# https://w3id.org/def/isa-glomicave/hasMaterial
+<https://w3id.org/def/isa-glomicave/hasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/isa-glomicave/hasMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/isa-glomicave/Material> .
+<https://w3id.org/def/isa-glomicave/hasMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
+<https://w3id.org/def/isa-glomicave/hasMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "has material"@en .
 # 
 # https://w3id.org/def/isa-glomicave/hasOrganization
 <https://w3id.org/def/isa-glomicave/hasOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -242,7 +245,7 @@
 <https://w3id.org/def/isa-glomicave/doi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/isa-glomicave/identifier> .
 <https://w3id.org/def/isa-glomicave/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier defined in DOI"@en .
 <https://w3id.org/def/isa-glomicave/doi> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
-<https://w3id.org/def/isa-glomicave/doi> <http://www.w3.org/2000/01/rdf-schema#label> "PubMed identifier"@en .
+<https://w3id.org/def/isa-glomicave/doi> <http://www.w3.org/2000/01/rdf-schema#label> "DOI identifier"@en .
 # 
 # https://w3id.org/def/isa-glomicave/email
 <https://w3id.org/def/isa-glomicave/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -250,6 +253,13 @@
 <https://w3id.org/def/isa-glomicave/email> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
 <https://w3id.org/def/isa-glomicave/email> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
 <https://w3id.org/def/isa-glomicave/email> <http://www.w3.org/2000/01/rdf-schema#label> "email"@en .
+# 
+# https://w3id.org/def/isa-glomicave/feature_count
+<https://w3id.org/def/isa-glomicave/feature_count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/isa-glomicave/feature_count> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/isa-glomicave/feature_count> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/def/isa-glomicave/feature_count> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
+<https://w3id.org/def/isa-glomicave/feature_count> <http://www.w3.org/2000/01/rdf-schema#label> "feature count"@en .
 # 
 # https://w3id.org/def/isa-glomicave/file
 <https://w3id.org/def/isa-glomicave/file> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -277,11 +287,23 @@
 <https://w3id.org/def/isa-glomicave/hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/isa-glomicave/hasName> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
 <https://w3id.org/def/isa-glomicave/hasName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
-<https://w3id.org/def/isa-glomicave/hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has Value"@en .
 <https://w3id.org/def/isa-glomicave/hasName> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 # 
 # https://w3id.org/def/isa-glomicave/hasPerformer
 <https://w3id.org/def/isa-glomicave/hasPerformer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/def/isa-glomicave/hasType
+<https://w3id.org/def/isa-glomicave/hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/isa-glomicave/hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/isa-glomicave/hasType> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/def/isa-glomicave/hasType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
+<https://w3id.org/def/isa-glomicave/hasType> <http://www.w3.org/2000/01/rdf-schema#label> "type"@en .
+# 
+# https://w3id.org/def/isa-glomicave/hasValue
+<https://w3id.org/def/isa-glomicave/hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/isa-glomicave/hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/def/isa-glomicave/hasValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
+<https://w3id.org/def/isa-glomicave/hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has Value"@en .
 # 
 # https://w3id.org/def/isa-glomicave/identifier
 <https://w3id.org/def/isa-glomicave/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -352,9 +374,6 @@
 # 
 # http://org.semanticweb.owlapi/error#Error1
 <http://org.semanticweb.owlapi/error#Error1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# http://org.semanticweb.owlapi/error#Error2
-<http://org.semanticweb.owlapi/error#Error2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://purl.org/isatermspublication
 <http://purl.org/isatermspublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -443,8 +462,11 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/def/isa-glomicave/Measurement
 <https://w3id.org/def/isa-glomicave/Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/isa-glomicave/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://org.semanticweb.owlapi/error#Error1> .
-<https://w3id.org/def/isa-glomicave/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://org.semanticweb.owlapi/error#Error2> .
 <https://w3id.org/def/isa-glomicave/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Measurement> .
+<https://w3id.org/def/isa-glomicave/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasValue> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
 <https://w3id.org/def/isa-glomicave/Measurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
 <https://w3id.org/def/isa-glomicave/Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "measurement"@en .
@@ -458,10 +480,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/def/isa-glomicave/Person
 <https://w3id.org/def/isa-glomicave/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/isa-glomicave/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Person> .
-<https://w3id.org/def/isa-glomicave/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://schema.org/Organization> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasAffiliation> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/isa-glomicave/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://schema.org/Organization> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasAffiliation> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (alive, dead, undead, or fictional)."@en .
 <https://w3id.org/def/isa-glomicave/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
 <https://w3id.org/def/isa-glomicave/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
@@ -474,32 +496,32 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/def/isa-glomicave/Process
 <https://w3id.org/def/isa-glomicave/Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/isa-glomicave/Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Source> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasInput> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Sample> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasOutput> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Source> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasInput> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasPerformer> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Sample> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasOutput> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/isa-glomicave/Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasPerformer> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Process> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
 <https://w3id.org/def/isa-glomicave/Process> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
 <https://w3id.org/def/isa-glomicave/Process> <http://www.w3.org/2000/01/rdf-schema#label> "process"@en .
 # 
 # https://w3id.org/def/isa-glomicave/Protocol
 <https://w3id.org/def/isa-glomicave/Protocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/isa-glomicave/Protocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/ProtocolComponent> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasComponent> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Protocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Parameter> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasParameter> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/ProtocolComponent> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasComponent> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/isa-glomicave/Protocol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Parameter> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasParameter> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Protocol> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
 <https://w3id.org/def/isa-glomicave/Protocol> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
 <https://w3id.org/def/isa-glomicave/Protocol> <http://www.w3.org/2000/01/rdf-schema#label> "protocol"@en .
@@ -559,18 +581,18 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/def/isa-glomicave/Study
 <https://w3id.org/def/isa-glomicave/Study> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/isa-glomicave/Study> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/StudyDesign> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasDesign> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Study> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Factor> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasFactor> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/StudyDesign> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasDesign> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Study> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Protocol> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasProtocol> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Factor> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasFactor> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/isa-glomicave/Study> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/isa-glomicave/Protocol> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/isa-glomicave/hasProtocol> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/def/isa-glomicave/Study> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
 <https://w3id.org/def/isa-glomicave/Study> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
 <https://w3id.org/def/isa-glomicave/Study> <http://www.w3.org/2000/01/rdf-schema#label> "study"@en .
@@ -587,10 +609,9 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/def/isa-glomicave/Technology> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/isa-glomicave/> .
 <https://w3id.org/def/isa-glomicave/Technology> <http://www.w3.org/2000/01/rdf-schema#label> "technology"@en .
 # 
-_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid16 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid17 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid18 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # 

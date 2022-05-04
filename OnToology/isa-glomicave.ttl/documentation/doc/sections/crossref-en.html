@@ -268,6 +268,11 @@ This section provides details for each class and property defined by ISA Abstrac
             <sup class="type-c" title="class">c</sup>, <a href="#Source" title="https://w3id.org/def/isa-glomicave/Source">source</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasMaterial" title="https://w3id.org/def/isa-glomicave/hasMaterial">has material</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Measurement">
@@ -292,9 +297,6 @@ This section provides details for each class and property defined by ISA Abstrac
             <a href="http://org.semanticweb.owlapi/error#Error1"
                target="_blank"
                title="http://org.semanticweb.owlapi/error#Error1">error1</a>
-            <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error2"
-               target="_blank"
-               title="http://org.semanticweb.owlapi/error#Error2">error2</a>
             <sup class="type-c" title="class">c</sup>, <a href="https://saref.etsi.org/core/Measurement"
                target="_blank"
                title="https://saref.etsi.org/core/Measurement">measurement</a>
@@ -786,6 +788,9 @@ This section provides details for each class and property defined by ISA Abstrac
          <a href="#hasInput" title="https://w3id.org/def/isa-glomicave/hasInput">has input</a>
       </li>
       <li>
+         <a href="#hasMaterial" title="https://w3id.org/def/isa-glomicave/hasMaterial">has material</a>
+      </li>
+      <li>
          <a href="#https://saref.etsi.org/core/hasMeasurement" title="https://saref.etsi.org/core/hasMeasurement">has measurement</a>
       </li>
       <li>
@@ -1025,6 +1030,29 @@ This section provides details for each class and property defined by ISA Abstrac
             <a href="https://w3id.org/def/isa-glomicave/">https://w3id.org/def/isa-glomicave/</a>
          </dd>
       </dl>
+   </div>
+   <div class="entity" id="hasMaterial">
+      <h3>has material<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/hasMaterial</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/isa-glomicave/">https://w3id.org/def/isa-glomicave/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Material" title="https://w3id.org/def/isa-glomicave/Material">material</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="https://saref.etsi.org/core/hasMeasurement">
       <h3>has measurement<sup class="type-op" title="object property">op</sup>
@@ -1317,7 +1345,13 @@ This section provides details for each class and property defined by ISA Abstrac
          <a href="#description" title="https://w3id.org/def/isa-glomicave/description">description</a>
       </li>
       <li>
+         <a href="#doi" title="https://w3id.org/def/isa-glomicave/doi">DOI identifier</a>
+      </li>
+      <li>
          <a href="#email" title="https://w3id.org/def/isa-glomicave/email">email</a>
+      </li>
+      <li>
+         <a href="#feature_count" title="https://w3id.org/def/isa-glomicave/feature_count">feature count</a>
       </li>
       <li>
          <a href="#file" title="https://w3id.org/def/isa-glomicave/file">file</a>
@@ -1329,10 +1363,13 @@ This section provides details for each class and property defined by ISA Abstrac
          <a href="#hasDate" title="https://w3id.org/def/isa-glomicave/hasDate">has date</a>
       </li>
       <li>
-         <a href="#hasName" title="https://w3id.org/def/isa-glomicave/hasName">has Value</a>
+         <a href="#hasValue" title="https://w3id.org/def/isa-glomicave/hasValue">has Value</a>
       </li>
       <li>
          <a href="#identifier" title="https://w3id.org/def/isa-glomicave/identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#hasName" title="https://w3id.org/def/isa-glomicave/hasName">name</a>
       </li>
       <li>
          <a href="#accessionNumber"
@@ -1343,9 +1380,6 @@ This section provides details for each class and property defined by ISA Abstrac
       </li>
       <li>
          <a href="#phone" title="https://w3id.org/def/isa-glomicave/phone">phone</a>
-      </li>
-      <li>
-         <a href="#doi" title="https://w3id.org/def/isa-glomicave/doi">PubMed identifier</a>
       </li>
       <li>
          <a href="#pubmedIdentifier"
@@ -1360,6 +1394,9 @@ This section provides details for each class and property defined by ISA Abstrac
       </li>
       <li>
          <a href="#title" title="https://w3id.org/def/isa-glomicave/title">title</a>
+      </li>
+      <li>
+         <a href="#hasType" title="https://w3id.org/def/isa-glomicave/hasType">type</a>
       </li>
       <li>
          <a href="#version" title="https://w3id.org/def/isa-glomicave/version">version</a>
@@ -1419,6 +1456,32 @@ This section provides details for each class and property defined by ISA Abstrac
          </dl>
       </div>
    </div>
+   <div class="entity" id="doi">
+      <h3>DOI identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/doi</p>
+      <div class="comment">
+         <span class="markdown">A unique identifier defined in DOI</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/isa-glomicave/">https://w3id.org/def/isa-glomicave/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#identifier" title="https://w3id.org/def/isa-glomicave/identifier">identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="email">
       <h3>email<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1426,6 +1489,33 @@ This section provides details for each class and property defined by ISA Abstrac
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/email</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/isa-glomicave/">https://w3id.org/def/isa-glomicave/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="feature_count">
+      <h3>feature count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/feature_count</p>
       <div class="comment">
          <span class="markdown"/>
       </div>
@@ -1497,13 +1587,13 @@ This section provides details for each class and property defined by ISA Abstrac
          </dd>
       </dl>
    </div>
-   <div class="entity" id="hasName">
+   <div class="entity" id="hasValue">
       <h3>has Value<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/hasName</p>
+         <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/hasValue</p>
       <div class="comment">
          <span class="markdown"/>
       </div>
@@ -1513,16 +1603,6 @@ This section provides details for each class and property defined by ISA Abstrac
             <a href="https://w3id.org/def/isa-glomicave/">https://w3id.org/def/isa-glomicave/</a>
          </dd>
       </dl>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="identifier">
       <h3>identifier<sup class="type-dp" title="data property">dp</sup>
@@ -1544,7 +1624,7 @@ This section provides details for each class and property defined by ISA Abstrac
          <dl>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#doi" title="https://w3id.org/def/isa-glomicave/doi">PubMed identifier</a>
+               <a href="#doi" title="https://w3id.org/def/isa-glomicave/doi">DOI identifier</a>
                <sup class="type-dp" title="data property">dp</sup>, <a href="#pubmedIdentifier"
                   title="https://w3id.org/def/isa-glomicave/pubmedIdentifier">PubMed identifier</a>
                <sup class="type-dp" title="data property">dp</sup>
@@ -1554,6 +1634,33 @@ This section provides details for each class and property defined by ISA Abstrac
                <a href="http://www.w3.org/2001/XMLSchema#anyURI"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasName">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/hasName</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/isa-glomicave/">https://w3id.org/def/isa-glomicave/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -1625,32 +1732,6 @@ This section provides details for each class and property defined by ISA Abstrac
                <a href="http://www.w3.org/2001/XMLSchema#string"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="doi">
-      <h3>PubMed identifier<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/doi</p>
-      <div class="comment">
-         <span class="markdown">A unique identifier defined in DOI</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="https://w3id.org/def/isa-glomicave/">https://w3id.org/def/isa-glomicave/</a>
-         </dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#identifier" title="https://w3id.org/def/isa-glomicave/identifier">identifier</a>
-               <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
       </div>
@@ -1744,6 +1825,33 @@ This section provides details for each class and property defined by ISA Abstrac
          <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/title</p>
       <div class="comment">
          <span class="markdown">A concise name given to the investigation/study/assay.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/isa-glomicave/">https://w3id.org/def/isa-glomicave/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasType">
+      <h3>type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/isa-glomicave/hasType</p>
+      <div class="comment">
+         <span class="markdown"/>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
