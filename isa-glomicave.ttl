@@ -164,6 +164,12 @@ glomicave:hasComponent rdf:type owl:ObjectProperty ;
                         rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
                         rdfs:label "has component"@en .
 
+###  https://w3id.org/def/isa-glomicave/hasMaterial
+glomicave:hasMaterial rdf:type owl:ObjectProperty ;
+                        rdfs:range glomicave:Material;
+                        rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/>  ;
+                        rdfs:label "has material"@en .
+
 ###  https://saref.etsi.org/core/hasMeasurement
 saref:hasMeasurement rdf:type owl:ObjectProperty ;
                      rdfs:isDefinedBy <https://saref.etsi.org/core/> ;
@@ -261,6 +267,20 @@ glomicave:address rdf:type owl:DatatypeProperty ;
                       rdfs:comment ""@en ;   
                       rdfs:label "address"@en .
 
+### https://w3id.org/def/isa-glomicave/hasType
+glomicave:hasType rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:comment ""@en ;   
+                      rdfs:label "type"@en .
+
+### https://w3id.org/def/isa-glomicave/feature_count
+glomicave:feature_count rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string;
+                      rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
+                      rdfs:comment ""@en ;   
+                      rdfs:label "feature count"@en .
+
 #################################################################
 #    Data Properties
 #################################################################
@@ -284,7 +304,7 @@ glomicave:doi rdf:type owl:DatatypeProperty  ;
                       rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
                       rdfs:subPropertyOf glomicave:identifier ;
                       rdfs:comment "A unique identifier defined in DOI"@en ;
-                      rdfs:label "PubMed identifier"@en .
+                      rdfs:label "DOI identifier"@en .
 
 ### https://w3id.org/def/isa-glomicave/title
 glomicave:title rdf:type owl:DatatypeProperty ;
@@ -322,7 +342,7 @@ glomicave:hasName rdf:type owl:DatatypeProperty ;
                       rdfs:label "name"@en .
 
 ### https://w3id.org/def/isa-glomicave/hasValue
-glomicave:hasName rdf:type owl:DatatypeProperty ;
+glomicave:hasValue rdf:type owl:DatatypeProperty ;
                       owl:equivalentProperty saref:hasValue ;
                       rdfs:isDefinedBy <https://w3id.org/def/isa-glomicave/> ;
                       rdfs:comment ""@en ;   

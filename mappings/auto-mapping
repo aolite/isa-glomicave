@@ -1,0 +1,47 @@
+MAPPING
+FROM SQL {
+  SELECT *
+  FROM "public"."metabolites"
+}
+TO {
+  ?subject <http://api.stardog.com/metabolites#chemical_formula> ?chemical_formula .
+  ?subject <http://api.stardog.com/metabolites#concentrations> ?concentrations .
+  ?subject <http://api.stardog.com/metabolites#database_identifier> ?database_identifier .
+  ?subject <http://api.stardog.com/metabolites#id> ?id_integer .
+  ?subject <http://api.stardog.com/metabolites#inchi> ?inchi .
+  ?subject <http://api.stardog.com/metabolites#metabolite_identification> ?metabolite_identification .
+  ?subject <http://api.stardog.com/metabolites#smiles> ?smiles .
+  ?subject <http://api.stardog.com/metabolites#species> ?species .
+  ?subject <http://api.stardog.com/metabolites#study> ?study .
+  ?subject <http://api.stardog.com/metabolites#taxid> ?taxid .
+  ?subject rdf:type :metabolites
+} WHERE {
+  BIND(StrDt(?id, xsd:integer) AS ?id_integer)
+  BIND(template("http://api.stardog.com/metabolites/id={id}") AS ?subject)
+}
+
+;
+
+MAPPING
+FROM SQL {
+  SELECT *
+  FROM "public"."genomics"
+}
+TO {
+  ?subject <http://api.stardog.com/genomics#concentrations> ?concentrations .
+  ?subject <http://api.stardog.com/genomics#dataset_name> ?dataset_name .
+  ?subject <http://api.stardog.com/genomics#description> ?description .
+  ?subject <http://api.stardog.com/genomics#feature_count> ?feature_count .
+  ?subject <http://api.stardog.com/genomics#id> ?id_integer .
+  ?subject <http://api.stardog.com/genomics#platform> ?platform .
+  ?subject <http://api.stardog.com/genomics#platform_organism> ?platform_organism .
+  ?subject <http://api.stardog.com/genomics#platform_technology_type> ?platform_technology_type .
+  ?subject <http://api.stardog.com/genomics#sample_organism> ?sample_organism .
+  ?subject <http://api.stardog.com/genomics#sample_type> ?sample_type .
+  ?subject <http://api.stardog.com/genomics#title> ?title .
+  ?subject <http://api.stardog.com/genomics#type> ?type .
+  ?subject rdf:type :genomics
+} WHERE {
+  BIND(StrDt(?id, xsd:integer) AS ?id_integer)
+  BIND(template("http://api.stardog.com/genomics/id={id}") AS ?subject)
+}

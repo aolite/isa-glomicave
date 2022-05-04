@@ -1,16 +1,38 @@
-PREFIX : <http://glomicave.eu/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <https://w3id.org/def/isa-glomicave/>
+PREFIX saref: <https://saref.etsi.org/core/>
+
 MAPPING :MetaboliteMapping
 FROM SQL {
   SELECT * FROM public.metabolites
 }
 TO {
-  ?metabolite a :Assay ;
-              a :MetabolitesAssay ;
-              :id ?id ;
-              :hasPart ?study ;
-              :databaseid ?database_identifier ; 
+  ?metabolite a :Study ;
+              :identifier ?id ;
+              :hasFactor ?factor ;
+              :pubmedIdentifier ?database_identifier ;
+              saref:hasMeasurement ?measurement; 
+              :taxid ?taxid;
+              :species ?species;
               :formula ?chemical_formula .
+  
+  ?factor a :Factor ;
+          :identifier ?database_identifier; 
+          :hasName ?chemical_formula;
+          :description ?smiles;
+          :accessionNumber ?database_identifier;
+          :inchl ?inchi;
+          :title ?metabolite_identification .
+          
+                  
+  ?measurement a :Measurement;
+               :hasValue ?concentrations .
 } 
 WHERE {
-  BIND(template("http://glomicave.eu/ontology/Metabolite{id}") AS ?metabolite)
+  BIND(template("http://glomicave.eu/ontology/Assay/{id}") AS ?metabolite)
+  BIND(template("http://glomicave.eu/ontology/Factor/{database_identifier}") AS ?factor)
+  BIND(template("http://glomicave.eu/ontology/Measurement/Measurement_{id}") AS ?measurement)
 }
