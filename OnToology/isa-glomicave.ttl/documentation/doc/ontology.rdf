@@ -108,13 +108,6 @@
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#cardinality -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#cardinality"/>
-    
-
-
     <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
 
 
@@ -267,6 +260,17 @@
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
         <rdfs:label xml:lang="en">has input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/isa-glomicave/hasMaterial">
+        <rdfs:range rdf:resource="https://w3id.org/def/isa-glomicave/Material"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has material</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -446,7 +450,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/isa-glomicave/identifier"/>
         <rdfs:comment xml:lang="en">A unique identifier defined in DOI</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
-        <rdfs:label xml:lang="en">PubMed identifier</rdfs:label>
+        <rdfs:label xml:lang="en">DOI identifier</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -459,6 +463,18 @@
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
         <rdfs:label xml:lang="en">email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/feature_count -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/feature_count">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">feature count</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -510,7 +526,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
-        <rdfs:label xml:lang="en">has Value</rdfs:label>
         <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -520,6 +535,29 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/hasPerformer"/>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/hasType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/isa-glomicave/hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/isa-glomicave/hasValue">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
+        <rdfs:label xml:lang="en">has Value</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -637,13 +675,6 @@
 
 
     <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error2 -->
-
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
     
 
 
@@ -807,8 +838,13 @@
 
     <owl:Class rdf:about="https://w3id.org/def/isa-glomicave/Measurement">
         <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
-        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error2"/>
         <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/isa-glomicave/hasValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/isa-glomicave/"/>
         <rdfs:label xml:lang="en">measurement</rdfs:label>
@@ -1057,9 +1093,6 @@
     </rdf:Description>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
     </rdf:Description>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
